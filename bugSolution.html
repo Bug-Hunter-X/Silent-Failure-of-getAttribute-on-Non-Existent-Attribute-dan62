@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    const myDiv = document.getElementById('myDiv');
+    const attributeValue = myDiv.getAttribute('id'); // Accessing an existing attribute
+    console.log(attributeValue); // Output: myDiv
+    
+    //Check for null before using.   
+    const nonExistentValue = myDiv.getAttribute('nonExistentAttribute');
+    if(nonExistentValue === null){
+        console.error("Attribute 'nonExistentAttribute' does not exist")
+    } else {
+        console.log(nonExistentValue);
+    }
+  </script>
+</body>
+</html>
