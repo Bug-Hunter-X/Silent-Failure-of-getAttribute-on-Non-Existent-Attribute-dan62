@@ -1,0 +1,1 @@
+This repository demonstrates a subtle bug in HTML involving the getAttribute() method.  When attempting to retrieve a non-existent attribute from an element, getAttribute() silently returns null instead of raising an error or warning, making debugging more difficult. The bug.html file showcases the problem, and bugSolution.html offers a solution.
